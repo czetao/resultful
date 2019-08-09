@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vue?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 666666
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: mysql
+
+  redis:
+    redis:
+      database: 0
+      host: 127.0.0.1
+      port: 6379
+      password:
+
+  freemarker:
+    template-loader-path:
+    - classpath:/templates
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    expose-request-attributes: true
+    expose-session-attributes: true
+    request-context-attribute: request
+    suffix: .ftl
+    cache: false
